@@ -1,6 +1,6 @@
 import React, { ChangeEvent, FC, useState } from 'react';
 import './App.css';
-import { todoType } from "./appTypes"
+import { todoType } from "./appTypes.ts"
 import TodoItem from './TodoItem.tsx';
 
 const App: FC = () => {
@@ -9,7 +9,7 @@ const App: FC = () => {
   const [todoList, setTodoList] = useState<todoType[]>([])
 
   console.log(todoList);
-
+  
   const handleChange = (e: ChangeEvent<HTMLInputElement>): void => {
     if (e.target.name === "task") {
       setTask(e.target.value)
